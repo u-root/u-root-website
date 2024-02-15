@@ -1,0 +1,191 @@
+---
+title: "Home"
+layout: "layouts/base.njk"
+permalink: /
+---
+
+<div class="wrapper | stack-3xl">
+  <section class="home-hero | stack-m">
+    <div class="home-hero__content-wrap">
+      <h1 class="head-step-2">
+        Create your universal root toolbox
+        <span class="color-dots" style="display: inline-flex;">
+          {% include "svg/color-dots.svg" %}
+        </span>
+      </h1>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 600 380"
+        width="600"
+        height="380"
+        fill="none">
+        <rect width="100%" height="100%" fill="currentColor"></svg>
+      </div>
+
+      <section class="logo-wall | stack-2xs my-stack-space-0 | color-args">
+        <p>Heavily utilized by</p>
+
+        <ul class="cluster" role="list" style="--cluster-justification: center; --cluster-alignment: center; --cluster-gap: var(--space-s);">
+          <li>
+            <a href="#">
+              <span class="sr-only">9elements Cyber Security</span>
+              {% include "svg/9elements-logo.svg" %}
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="sr-only">ByteDance</span>
+              {% include "svg/byte-dance-logo.svg" %}
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="sr-only">Google</span>
+              {% include "svg/google-logo.svg" %}
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="sr-only">TrenchBoot</span>
+              <img src="/images/trench-boot-logo.png" alt="">
+            </a>
+          </li>
+        </ul>
+      </section>
+      {# <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 360 200"
+            width="360"
+            height="200"
+            fill="none" class="my-stack-space-0">
+        <rect width="100%" height="100%" fill="currentColor"></svg> #}
+    </section>
+
+    <section class="benefits | stack-m">
+      <h2 class="head-step-1">Powerful tools at your fingertips</h2>
+
+      <ul class="cluster" role="list" style="--cluster-justification: center; --cluster-gap: var(--space-2xs);">
+        <li class="cluster" style="--cluster-gap: var(--space-3xs);">
+          <span aria-hidden="true">🚀</span>
+      Deployed at scale in Google data centers
+    </li>
+
+        <li class="cluster" style="--cluster-gap: var(--space-3xs);">
+          <span aria-hidden="true">💻</span>
+      Almost 200 Unix commands written in Go
+    </li>
+
+        <li class="cluster" style="--cluster-gap: var(--space-3xs);">
+          <span aria-hidden="true">📦</span>
+      Build many Go programs into one
+    </li>
+
+        <li class="cluster" style="--cluster-gap: var(--space-3xs);">
+          <span aria-hidden="true">⏱️</span>
+      Builds an initramfs in 20 seconds
+    </li>
+
+        <li class="cluster" style="--cluster-gap: var(--space-3xs);">
+          <span aria-hidden="true">🧰</span>
+      Include any Go program and other utilities
+    </li>
+      </ul>
+    </section>
+
+    <section class="features | stack-m">
+      <h2 class="head-step-1">Features in focus</h2>
+
+      <ul class="cluster" role="list" style="--cluster-gap: var(--space-s);">
+        <li class="stack-xs">
+          <h3>One binary</h3>
+          <p>A way to compile many Go programs into a single binary with busybox mode.</p>
+        </li>
+
+        <li class="stack-xs">
+          <h3>Unix tools</h3>
+          <p>Go versions of many standard Linux tools, such as <code class="font-mono color-args">ls</code>, <code class="font-mono color-args">cp</code>, or <code class="font-mono color-args">shutdown</code>.</p>
+        </li>
+
+        <li class="stack-xs">
+          <h3>Test</h3>
+          <p>Go bootloaders that use <code class="font-mono color-args">kexec</code> to boot Linux or multiboot kernels such as ESXi, Xen, or tboot.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="success-stories" class="stack-m">
+      <h2 class="head-step-1">Crafting success</h2>
+    </section>
+
+    <section id="get-started" class="stack-m">
+      <h2 class="head-step-1">Get started</h2>
+
+      <div class="sidebar-right" style="align-items: center; --sidebar-gap: var(--space-l); --sidebar-width: 30rem">
+        <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 600 380"
+        width="500"
+        height="100%"
+        fill="none">
+          <rect width="600" height="380" fill="currentColor"></svg>
+
+          <div class="stack-xs">
+            <h3 class="head-step-0">Tackle your challenges at the roots</h3>
+
+            <p>Clone the repo and begin your u-root journey right now.</p>
+
+            <a class="btn" href="#">Get started</a>
+          </div>
+        </div>
+      </section>
+
+      <h2 class="head-step-1">Comments from our partners</h2>
+
+      <section id="community" class="community | stack-m">
+        <h2 class="head-step-1">Take roots in our amazing community</h2>
+
+        <div class="cluster" style="
+          --cluster-justification: center; 
+          --cluster-alignment: center; 
+          --cluster-gap: var(--space-xl);
+        ">
+          <div class="stack-xs">
+            <a href="#" class="btn btn--secondary">
+              {%- icon
+                icon = "slack",
+                width = "1.25em"
+              -%}
+              Join our Slack channel
+            </a>
+            <br>
+            <a href="#" class="btn btn--secondary">
+              {%- icon
+                icon = "github",
+                width = "1.25em"
+              -%}
+              Contribute on GitHub
+            </a>
+          </div>
+
+          <div class="stack-xs">
+            <p>Recent talk: Experts insights</p>
+
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 360 200"
+            width="360"
+            height="200"
+            fill="none">
+              <rect width="100%" height="100%" fill="currentColor"></svg>
+            </div>
+          </div>
+        </section>
+
+        <div class="cluster" style="--cluster-justification: center">
+          <img src="/images/go-gopher.png" alt="The Go Gopher mascot peeks from behind the footer">
+        </div>
+      </div>

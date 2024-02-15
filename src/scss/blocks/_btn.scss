@@ -1,0 +1,30 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3xs);
+  text-decoration: none;
+  @include apply-utility('bg', 'recover');
+  @include apply-utility('color', 'void');
+  padding: var(--space-3xs) var(--space-xs);
+  border: 1px solid var(--color-recover);
+  border-radius: var(--border-radius);
+  transition: background-color 0.2s ease-out;
+
+  &:hover {
+    background: none;
+    color: var(--color-recover);
+    border-color: currentColor;
+  }
+
+  &--secondary {
+    background: none;
+    color: inherit;
+    border: 1px solid currentColor;
+
+    &:hover {
+      background: var(--color-init);
+      color: var(--color-void);
+      border-color: var(--color-void);
+    }
+  }
+}

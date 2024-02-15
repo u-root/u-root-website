@@ -1,0 +1,39 @@
+<footer id="footer" class="site-foot">
+  <div class="wrapper">
+    <div class="cluster" style="--cluster-justification: space-between; --cluster-alignment: center;">
+      <a href="/" class="site-foot__logo" aria-label="u-root Home">{% include "svg/logo.svg" %}</a>
+
+      <ul class="site-foot__socials | cluster" role="list" style="--cluster-gap: var(--space-s);">
+        <li>
+          <a href="#">
+            <span class="sr-only">GitHub</span>
+            {%- icon
+              icon = "github",
+              width = "1.75rem"
+            -%}
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="sr-only">Mastodon</span>
+            {%- icon
+              icon = "mastodon",
+              width = "1.75rem"
+            -%}
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="sr-only">Slack</span>
+            {%- icon
+              icon = "slack",
+              width = "1.75rem"
+            -%}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>

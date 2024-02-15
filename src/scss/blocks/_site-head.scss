@@ -1,0 +1,10 @@
+.site-head {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-m);
+  align-items: center;
+  flex-wrap: wrap;
+  width: min(100% - var(--space-xl), 80rem);
+  margin-inline: auto;
+  margin-block: var(--space-s);
+}

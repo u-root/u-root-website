@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "text": "Success stories",
+      "url": "/#success-stories"
+    },
+    {
+      "text": "Get started",
+      "url": "/#get-started"
+    },
+    {
+      "text": "Community",
+      "url": "/#community"
+    },
+    {
+      "text": "Docs",
+      "url": "/#docs"
+    }
+  ]
+}

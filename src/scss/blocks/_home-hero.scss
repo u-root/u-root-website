@@ -1,0 +1,37 @@
+.home-hero {
+  // 189px - 138px von 320px bis 760px;
+  --site-head-height: clamp(11.813rem, 12.723rem + -4.55vw, 8.625rem);
+
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-auto-rows: max-content;
+  min-height: calc(100dvh - var(--site-head-height));
+
+  .color-dots svg {
+    height: 1em;
+  }
+
+  &__content-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-m);
+    align-items: center;
+
+    &::before,
+    &::after {
+      content: '';
+      background: #09f;
+      width: 100%;
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+
+    &::before {
+      min-height: 1rem;
+    }
+
+    &::after {
+      min-height: var(--space-m);
+    }
+  }
+}
