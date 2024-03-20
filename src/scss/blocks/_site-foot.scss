@@ -5,4 +5,13 @@
   &__logo svg {
     width: 3.75rem;
   }
+
+  a:focus-visible {
+    outline: 2px dashed var(--color-recover);
+    outline-offset: 2px;
+  }
+
+  a:not(.site-foot__logo):hover {
+    color: var(--color-recover);
+  }
 }

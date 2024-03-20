@@ -1,10 +1,14 @@
 .site-head {
-  display: flex;
-  justify-content: space-between;
-  gap: var(--space-m);
-  align-items: center;
-  flex-wrap: wrap;
   width: min(100% - var(--space-xl), 80rem);
   margin-inline: auto;
   margin-block: var(--space-s);
+
+  a:focus-visible {
+    outline: 2px dashed var(--color-recover);
+    outline-offset: 2px;
+  }
+
+  a:not(.site-head__logo):hover {
+    color: var(--color-recover);
+  }
 }
