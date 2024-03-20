@@ -9,12 +9,12 @@
   margin: calc(var(--centerflex-gap, 1rem) / 2 * -1) 0;
 
   &:before {
-    content: "";
+    content: '';
     flex-grow: 666;
     margin: 0;
     background: #f09;
     /* ↓ If --multiplier is negative, use 0px instead */
-    flex-basis: Max(0px, var(--multiplier));
+    flex-basis: max(0px, var(--multiplier));
   }
 
   > * {
