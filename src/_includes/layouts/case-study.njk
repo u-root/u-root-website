@@ -1,0 +1,36 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+  <div class="wrapper">
+    <article class="case-study | markdown-content | stack-s">
+      <a href="/#success-stories">← Back to the overview</a>
+      {{ content | replace("<p><img", "<img") | replace("></p>", ">") | safe }}
+    </article>
+
+    <div class="stack-xl">
+      {# <div class="stack-s">
+        <h2 class="step-1">More success stories</h2>
+        <ul class="cluster" role="list" style="
+          --cluster-justification: center;
+          --cluster-gap: var(--space-s);
+        ">
+          <li class="card case-study-teaser">
+            <h3 class="case-study-teaser__title">Supply-chain attack mitigations for firmware</h3>
+
+            <a class="case-study-teaser__link" href="/">Read more</a>
+          </li>
+
+          <li class="card case-study-teaser">
+            <h3 class="case-study-teaser__title">Another successful cooperation with Company x</h3>
+
+            <a class="case-study-teaser__link" href="/">Read more</a>
+          </li>
+        </ul>
+      </div> #}
+
+      <div class="cluster" style="--cluster-justification: center">
+        <img loading="lazy" src="/images/go-gopher.png" alt="The Go Gopher mascot peeks from behind the footer">
+      </div>
+    </div>
+  </div>
+{% endblock %}

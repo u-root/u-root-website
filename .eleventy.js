@@ -1,3 +1,9 @@
+const markdownIt = require('markdown-it')({
+  html: true,
+  breaks: true,
+  linkify: true,
+}).use(require('markdown-it-footnote'));
+
 // Filters
 const readableDate = require('./src/filters/readableDate.js');
 const w3DateFilter = require('./src/filters/w3-date-filter.js');
@@ -25,6 +31,14 @@ module.exports = (eleventyConfig) => {
     return arr.slice(0, limit);
   });
   eleventyConfig.addFilter('markdownFilter', markdownFilter);
+
+  // Configure markdown options
+  markdownIt.renderer.rules.footnote_block_open = () =>
+    '<footer>\n' +
+    '<h4 class="sr-only">Footnotes</h4>\n' +
+    '<ol class="footnotes-list">\n';
+
+  eleventyConfig.setLibrary('md', markdownIt);
 
   // Add Shortcodes
   eleventyConfig.addShortcode('icon', require('./src/shortcodes/icon.js'));
