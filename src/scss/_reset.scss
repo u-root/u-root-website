@@ -5,6 +5,10 @@
 *::before,
 *::after {
   box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* Remove default margin */
@@ -65,8 +69,8 @@ select {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul:where([role="list"]),
-ol:where([role="list"]) {
+ul:where([role='list']),
+ol:where([role='list']) {
   list-style-type: none;
   padding: 0;
 }

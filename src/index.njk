@@ -7,185 +7,337 @@ permalink: /
 <div class="wrapper | stack-3xl">
   <section class="home-hero | stack-m">
     <div class="home-hero__content-wrap">
-      <h1 class="head-step-2">
+      <div class="home-hero__background"></div>
+
+      <h1 class="head-step-3" style="max-width: 16ch; margin-inline: auto;">
         Create your universal root toolbox
         <span class="color-dots" style="display: inline-flex;">
           {% include "svg/color-dots.svg" %}
         </span>
       </h1>
 
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 600 380"
-        width="600"
-        height="380"
-        fill="none">
-        <rect width="100%" height="100%" fill="currentColor"></svg>
-      </div>
+      {% include "svg/home-hero_key-visual.svg" %}
+    </div>
 
-      <section class="logo-wall | stack-2xs my-stack-space-0 | color-args">
-        <p>Heavily utilized by</p>
+    <section class="logo-wall | stack-2xs my-stack-space-0 | color-args">
+      <h2 class="font-base text-step-0 weight-regular">Heavily utilized by</h2>
 
-        <ul class="cluster" role="list" style="--cluster-justification: center; --cluster-alignment: center; --cluster-gap: var(--space-s);">
-          <li>
-            <a href="#">
-              <span class="sr-only">9elements Cyber Security</span>
-              {% include "svg/9elements-logo.svg" %}
-            </a>
-          </li>
+      <ul class="logo-wall__logo-list cluster" role="list" style="
+        --cluster-justification: center; 
+        --cluster-alignment: center; 
+        --cluster-gap: var(--space-m);
+      ">
+        <li>
+          <a href="https://9esec.io/" target="blank">
+            <span class="sr-only">9elements Cyber Security</span>
+            {% include "svg/9elements-logo.svg" %}
+          </a>
+        </li>
 
-          <li>
-            <a href="#">
-              <span class="sr-only">ByteDance</span>
-              {% include "svg/byte-dance-logo.svg" %}
-            </a>
-          </li>
+        <li>
+          <a href="https://www.bytedance.com/" target="blank">
+            <span class="sr-only">ByteDance</span>
+            {% include "svg/byte-dance-logo.svg" %}
+          </a>
+        </li>
 
-          <li>
-            <a href="#">
-              <span class="sr-only">Google</span>
-              {% include "svg/google-logo.svg" %}
-            </a>
-          </li>
+        <li>
+          <a href="https://www.google.com/" target="blank">
+            <span class="sr-only">Google</span>
+            {% include "svg/google-logo.svg" %}
+          </a>
+        </li>
 
-          <li>
-            <a href="#">
-              <span class="sr-only">TrenchBoot</span>
-              <img src="/images/trench-boot-logo.png" alt="">
-            </a>
-          </li>
-        </ul>
-      </section>
-      {# <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 360 200"
-            width="360"
-            height="200"
-            fill="none" class="my-stack-space-0">
-        <rect width="100%" height="100%" fill="currentColor"></svg> #}
+        <li>
+          <a href="https://trenchboot.org/" target="blank">
+            <span class="sr-only">TrenchBoot</span>
+            <img loading="lazy" width="133" height="87" src="/images/trench-boot-logo.png" alt="">
+          </a>
+        </li>
+      </ul>
     </section>
+  </section>
 
-    <section class="benefits | stack-m">
-      <h2 class="head-step-1">Powerful tools at your fingertips</h2>
+  <section class="stack-l">
+    <h2 class="head-step-2" style="max-width: 16ch; margin-inline: auto;">
+      Powerful tools at your fingertips
+    </h2>
 
-      <ul class="cluster" role="list" style="--cluster-justification: center; --cluster-gap: var(--space-2xs);">
-        <li class="cluster" style="--cluster-gap: var(--space-3xs);">
-          <span aria-hidden="true">🚀</span>
-      Deployed at scale in Google data centers
+    <ul class="cluster" role="list" style="
+      --cluster-justification: center; 
+      --cluster-gap: var(--space-2xs);
+    ">
+      <li class="card | cluster" style="
+        --card-padding: var(--space-3xs) var(--space-2xs); 
+        --cluster-gap: var(--space-3xs);
+      ">
+        <span aria-hidden="true">🚀</span>
+        Deployed at scale in Google data centers
     </li>
 
-        <li class="cluster" style="--cluster-gap: var(--space-3xs);">
-          <span aria-hidden="true">💻</span>
+      <li class="card | cluster" style="
+          --card-padding: var(--space-3xs) var(--space-2xs); 
+          --cluster-gap: var(--space-3xs);
+        ">
+        <span aria-hidden="true">💻</span>
       Almost 200 Unix commands written in Go
     </li>
 
-        <li class="cluster" style="--cluster-gap: var(--space-3xs);">
-          <span aria-hidden="true">📦</span>
+      <li class="card | cluster" style="
+          --card-padding: var(--space-3xs) var(--space-2xs); 
+          --cluster-gap: var(--space-3xs);
+        ">
+        <span aria-hidden="true">📦</span>
       Build many Go programs into one
     </li>
 
-        <li class="cluster" style="--cluster-gap: var(--space-3xs);">
-          <span aria-hidden="true">⏱️</span>
+      <li class="card | cluster" style="
+          --card-padding: var(--space-3xs) var(--space-2xs); 
+          --cluster-gap: var(--space-3xs);
+        ">
+        <span aria-hidden="true">⏱️</span>
       Builds an initramfs in 20 seconds
     </li>
 
-        <li class="cluster" style="--cluster-gap: var(--space-3xs);">
-          <span aria-hidden="true">🧰</span>
+      <li class="card | cluster" style="
+          --card-padding: var(--space-3xs) var(--space-2xs); 
+          --cluster-gap: var(--space-3xs);
+        ">
+        <span aria-hidden="true">🧰</span>
       Include any Go program and other utilities
     </li>
-      </ul>
-    </section>
+    </ul>
+  </section>
 
-    <section class="features | stack-m">
-      <h2 class="head-step-1">Features in focus</h2>
+  <section class="features | stack-xl">
+    <h2 class="head-step-2" style="max-width: 16ch; margin-inline: auto;">
+      Features in focus
+    </h2>
 
-      <ul class="cluster" role="list" style="--cluster-gap: var(--space-s);">
-        <li class="stack-xs">
+    <ul class="features__list" role="list">
+      <li class="card features__card">
+        {% include "svg/binary.svg" %}
+
+        <div class="stack-xs">
           <h3>One binary</h3>
+
           <p>A way to compile many Go programs into a single binary with busybox mode.</p>
-        </li>
+        </div>
+      </li>
 
-        <li class="stack-xs">
+      <li class="card features__card">
+        {% include "svg/terminal.svg" %}
+
+        <div class="stack-xs">
           <h3>Unix tools</h3>
-          <p>Go versions of many standard Linux tools, such as <code class="font-mono color-args">ls</code>, <code class="font-mono color-args">cp</code>, or <code class="font-mono color-args">shutdown</code>.</p>
-        </li>
 
-        <li class="stack-xs">
-          <h3>Test</h3>
-          <p>Go bootloaders that use <code class="font-mono color-args">kexec</code> to boot Linux or multiboot kernels such as ESXi, Xen, or tboot.</p>
-        </li>
-      </ul>
-    </section>
+          <p>Go versions of many standard Linux tools, such as <code>ls</code>, <code>cp</code>, or <code>shutdown</code>.</p>
+        </div>
+      </li>
 
-    <section id="success-stories" class="stack-m">
-      <h2 class="head-step-1">Crafting success</h2>
-    </section>
+      <li class="card features__card">
+        {% include "svg/box.svg" %}
 
-    <section id="get-started" class="stack-m">
-      <h2 class="head-step-1">Get started</h2>
+        <div class="stack-xs">
+          <h3>Bootloader</h3>
 
-      <div class="sidebar-right" style="align-items: center; --sidebar-gap: var(--space-l); --sidebar-width: 30rem">
-        <svg
+          <p>Set of implementations that use <code>kexec</code> to boot Linux or multiboot kernels such as ESXi, Xen, or tboot.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section id="get-started" class="get-started | stack-l my-stack-space-2xl | anchor-offset">
+    <h2 class="head-step-2" style="max-width: 16ch; margin-inline: auto;">
+      Get started
+    </h2>
+
+    <div class="sidebar-right" style="
+      --sidebar-width: 30rem; 
+      --sidebar-gap: var(--space-l);
+      --sidebar-threshold: 20rem;
+      align-items: center;
+    ">
+      {# <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 600 380"
         width="500"
         height="100%"
         fill="none">
-          <rect width="600" height="380" fill="currentColor"></svg>
+          <rect width="600" height="380" fill="currentColor">
+        </svg> #}
+      {% include "svg/cli-demo.svg" %}
 
-          <div class="stack-xs">
-            <h3 class="head-step-0">Tackle your challenges at the roots</h3>
+      <div class="stack-xs">
+        <h3 class="head-step-1">Tackle your challenges at the root</h3>
 
-            <p>Clone the repo and begin your u-root journey right now.</p>
+        <p class="text-step-1">Clone the repo and begin your u-root journey right now.</p>
 
-            <a class="btn" href="#">Get started</a>
-          </div>
-        </div>
-      </section>
-
-      <h2 class="head-step-1">Comments from our partners</h2>
-
-      <section id="community" class="community | stack-m">
-        <h2 class="head-step-1">Take roots in our amazing community</h2>
-
-        <div class="cluster" style="
-          --cluster-justification: center; 
-          --cluster-alignment: center; 
-          --cluster-gap: var(--space-xl);
-        ">
-          <div class="stack-xs">
-            <a href="#" class="btn btn--secondary">
-              {%- icon
-                icon = "slack",
-                width = "1.25em"
-              -%}
-              Join our Slack channel
-            </a>
-            <br>
-            <a href="#" class="btn btn--secondary">
-              {%- icon
-                icon = "github",
-                width = "1.25em"
-              -%}
-              Contribute on GitHub
-            </a>
-          </div>
-
-          <div class="stack-xs">
-            <p>Recent talk: Experts insights</p>
-
-            <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 360 200"
-            width="360"
-            height="200"
-            fill="none">
-              <rect width="100%" height="100%" fill="currentColor"></svg>
-            </div>
-          </div>
-        </section>
-
-        <div class="cluster" style="--cluster-justification: center">
-          <img src="/images/go-gopher.png" alt="The Go Gopher mascot peeks from behind the footer">
-        </div>
+        <a class="btn" href="https://github.com/u-root/u-root"  target="blank">Get started</a>
       </div>
+    </div>
+  </section>
+
+  <section id="success-stories" class="stack-l my-stack-space-2xl | anchor-offset">
+    <h2 class="head-step-2" style="max-width: 16ch; margin-inline: auto;">
+      Crafting success
+    </h2>
+
+    {# <article class="cluster" style="
+      --cluster-gap: var(--space-s-m);
+    ">
+      <h3 class="head-step-1" style="width: min(20ch, 100%);">
+        Google worked with 9elements to bring u-root test coverage to 75%
+      </h3>
+
+      <div class="stack-xs-s" style="width: min(50ch, 100%);">
+        <p>
+          Google deployed u-root-based firmware at scale in its data centers in Dec. 2020, and since that time its use has continued to grow, including support for ARM mainboards. The firmware images are built in seconds, not hours, as with UEFI; they allow Google to remove several megabytes of C-based UEFI software; and they allow Google to apply its world-class expertise in Linux and Go programs to firmware.
+        </p>
+
+        <p>
+          The Go toolchain has strong mitigations for supply-chain attacks, always a concern with firmware. With recent improvements in Go code size, it has become quite easy to fit u-root’s 160 commands in a four MiB xz-compressed binary. Google worked with 9elements.org to bring u-root test coverage to 75% in 2021.
+        </p>
+      </div>
+    </article> #}
+
+    <ul class="grid-switcher" role="list" style="
+      --gs-columns-large: 2;
+      --gs-gap: var(--space-s);
+      max-width: calc((25rem * 2) - var(--space-s));
+      margin-inline: auto;
+    ">
+      <li>
+        <a href="/case-studies/google" class="card case-study-teaser">
+          <div class="case-study-teaser__title">
+            Google worked with 9elements to bring u-root test coverage to 75%
+          </div>
+
+          <div class="case-study-teaser__link">
+            Read more<span class="sr-only"> about the Google case study</span>
+          </div>
+        </a>
+      </li>
+
+      <li>
+        <a href="/case-studies/bytedance" class="card case-study-teaser">
+          <div class="case-study-teaser__title">
+            ByteDance greatly improved their boot software stack
+          </div>
+
+          <div class="case-study-teaser__link">
+            Read more<span class="sr-only"> about the ByteDance case study</span>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  {# <section class="testimonials | full-width | stack-m">
+    <h2 class="head-step-2" style="max-width: 16ch; margin-inline: auto;">
+      Comments from our partners
+    </h2>
+
+    <div class="testimonials__wrapper full-width cluster" style="
+      --cluster-justification: center;
+      --cluster-gap: var(--space-l);
+    ">
+      {% for testimonial in testimonials.data %}
+        <div class="cluster" style="
+            --cluster-justification: flex-start;
+            --cluster-gap: var(--space-xs);
+          ">
+          <img loading="lazy" src="{{ testimonial.imgPath }}" alt="">
+
+          <blockquote class="text-step-1 leading-tight | stack-3xs" style="
+              max-width: 24ch;
+            ">
+            <div>
+              <p>{{ testimonial.name }}</p>
+
+              {% if testimonial.position %}
+                <p>{{ testimonial.position }}</p>
+              {% endif %}
+            </div>
+
+            <p class="color-args">“{{ testimonial.quote }}”</p>
+          </blockquote>
+        </div>
+      {% endfor %}
+    </div>
+  </section> #}
+
+  <section id="community" class="community | stack-l | anchor-offset">
+    <h2 class="head-step-2" style="max-width: 16ch; margin-inline: auto;">
+      Take root in our amazing community
+    </h2>
+
+    <div class="cluster" style="
+      --cluster-justification: center; 
+      --cluster-alignment: center; 
+      --cluster-gap: var(--space-xl);
+    ">
+      <div class="community__links | stack-xs">
+        <a href="https://slack.osfw.dev/" target="blank" class="btn btn--secondary">
+          {%- icon
+            icon = "slack",
+            width = "1.25em"
+          -%}
+            Join our Slack channel
+        </a>
+
+        <a href="https://github.com/u-root/u-root" target="blank" class="btn btn--secondary">
+          {%- icon
+            icon = "github",
+            width = "1.25em"
+          -%}
+            Contribute on GitHub
+          </a>
+      </div>
+
+      <div class="community__video | stack-xs">
+        <p class="text-step-1">Recent talk: Experts insights</p>
+
+        <youtube-embed>
+          <img loading="lazy" src="/images/open-system-firmware-in-practice-experiences-deploying-linuxboot-and-coreboot-at-google.jpg" width="1024" height="576" alt="Open System Firmware in practice Experiences deploying LinuxBoot and coreboot at Google – OCP Global Summit 2021">
+
+          <iframe allow="autoplay" tabindex="-1" src="" data-src="https://www.youtube.com/embed/xsikf8JzQyU?autoplay=1" allowfullscreen></iframe>
+
+          <a href="https://www.youtube.com/watch?v=xsikf8JzQyU" target="blank" class="play-button">
+            <span class="sr-only">To the video</span>
+          </a>
+        </youtube-embed>
+
+        {# <vimeo-embed>
+          <img loading="lazy" src="/images/open-system-firmware-in-practice-experiences-deploying-linuxboot-and-coreboot-at-google.jpg" width="1024" height="576" alt="Open System Firmware in practice Experiences deploying LinuxBoot and coreboot at Google – OCP Global Summit 2021">
+
+          <iframe allow="autoplay" tabindex="-1" src="" data-src="https://player.vimeo.com/video/70591644?autoplay=1" allowfullscreen></iframe>
+
+          <a href="https://vimeo.com/70591644" target="blank" class="play-button">
+            <span class="sr-only">To the video</span>
+          </a>
+        </vimeo-embed> #}
+      </div>
+    </div>
+
+    <script>
+      (() => {
+        const link = document.querySelector('.play-button');
+        const btn = document.createElement('button');
+        btn.ariaLabel = "Play video";
+        btn.className = link.className;
+        link.replaceWith(btn);
+
+        btn.addEventListener('click', () => {
+          const video = btn.previousElementSibling;
+          video.src = video.dataset.src;
+          video.tabIndex = 0;
+        })
+      })();
+    </script>
+  </section>
+
+  <div class="gopher | cluster" style="--cluster-justification: center">
+    <img loading="lazy" width="71" height="47" src="/images/go-gopher.png" alt="The Go Gopher mascot peeks from behind the footer">
+  </div>
+</div>

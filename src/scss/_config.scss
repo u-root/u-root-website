@@ -8,18 +8,43 @@
 
 /* @link https://utopia.fyi/type/calculator?c=320,23,1.1,1440,40,1.333,2,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 $gorko-head-scale: (
-  'step-0': clamp(1.4375rem, 1.1339rem + 1.5179vw, 2.5rem),
-  'step-1': clamp(1.5813rem, 1.0809rem + 2.5018vw, 3.3325rem),
-  'step-2': clamp(1.7394rem, 0.9671rem + 3.8616vw, 4.4425rem),
+  'step-0': clamp(1.375rem, 1.232rem + 0.71vi, 1.875rem),
+  'step-1': clamp(1.625rem, 1.375rem + 1.25vi, 2.5rem),
+  'step-2': clamp(2.125rem, 1.804rem + 1.61vi, 3.25rem),
+  'step-3': clamp(2.5rem, 1.964rem + 2.68vi, 4.375rem),
 );
 
 /* @link https://utopia.fyi/type/calculator?c=320,12,1.333,1440,18,1.333,1,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 $gorko-text-scale: (
-  'step-0': clamp(0.75rem, 0.6429rem + 0.5357vw, 1.125rem),
-  'step-1': clamp(1rem, 0.8573rem + 0.7134vw, 1.4994rem),
+  'step-0': clamp(0.875rem, 0.804rem + 0.36vw, 1.125rem),
+  'step-1': clamp(1.125rem, 1.018rem + 0.54vw, 1.5rem),
 );
 
-/* @link https://utopia.fyi/space/calculator?c=320,12,1.333,1440,40,1.333,2,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+/* @link https://utopia.fyi/space/calculator?c=320,20,1.333,1440,40,1.333,2,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,&g=s,l,xl,12 */
+
+$space-size-scale: (
+  '0': 0,
+  // T-Shirt Sizes
+  '3xs': clamp(0.3125rem, 0.2232rem + 0.4464vi, 0.625rem),
+  '2xs': clamp(0.625rem, 0.4464rem + 0.8929vi, 1.25rem),
+  'xs': clamp(0.9375rem, 0.6696rem + 1.3393vi, 1.875rem),
+  's': clamp(1.25rem, 0.8929rem + 1.7857vi, 2.5rem),
+  'm': clamp(1.875rem, 1.3393rem + 2.6786vi, 3.75rem),
+  'l': clamp(2.5rem, 1.7857rem + 3.5714vi, 5rem),
+  'xl': clamp(3.75rem, 2.6786rem + 5.3571vi, 7.5rem),
+  '2xl': clamp(5rem, 3.5714rem + 7.1429vi, 10rem),
+  '3xl': clamp(7.5rem, 5.3571rem + 10.7143vi, 15rem),
+  /* One-up pairs */ '3xs-2xs': clamp(0.3125rem, 0.0446rem + 1.3393vi, 1.25rem),
+  '2xs-xs': clamp(0.625rem, 0.2679rem + 1.7857vi, 1.875rem),
+  'xs-s': clamp(0.9375rem, 0.4911rem + 2.2321vi, 2.5rem),
+  's-m': clamp(1.25rem, 0.5357rem + 3.5714vi, 3.75rem),
+  'm-l': clamp(1.875rem, 0.9821rem + 4.4643vi, 5rem),
+  'l-xl': clamp(2.5rem, 1.0714rem + 7.1429vi, 7.5rem),
+  'xl-2xl': clamp(3.75rem, 1.9643rem + 8.9286vi, 10rem),
+  '2xl-3xl': clamp(5rem, 2.1429rem + 14.2857vi, 15rem),
+);
+
+/*  @link https://utopia.fyi/space/calculator/?c=320,16,1.333,1440,40,1.333,2,0,&s=0.75%7C0.5%7C0.25,1.5%7C2%7C3%7C4%7C6,s-l&g=s,l,xl,12 
 $space-size-scale: (
   '0': 0,
   // T-Shirt Sizes
@@ -32,7 +57,16 @@ $space-size-scale: (
   'xl': clamp(3rem, 1.7143rem + 6.4286vw, 7.5rem),
   '2xl': clamp(4rem, 2.2857rem + 8.5714vw, 10rem),
   '3xl': clamp(6rem, 3.4286rem + 12.8571vw, 15rem),
-);
+  // One-up pairs
+  '3xs-2xs': clamp(0.1875rem, -0.1161rem + 1.5179vi, 1.25rem),
+  '2xs-xs': clamp(0.375rem, -0.0536rem + 2.1429vi, 1.875rem),
+  'xs-s': clamp(0.5625rem, 0.0089rem + 2.7679vi, 2.5rem),
+  's-m': clamp(0.75rem, -0.1071rem + 4.2857vi, 3.75rem),
+  'm-l': clamp(1.125rem, 0.0179rem + 5.5357vi, 5rem),
+  'l-xl': clamp(1.5rem, -0.2143rem + 8.5714vi, 7.5rem),
+  'xl-2xl': clamp(2.25rem, 0.0357rem + 11.0714vi, 10rem),
+  '2xl-3xl': clamp(3rem, -0.4286rem + 17.1429vi, 15rem),
+); */
 
 /**
   * COLORS

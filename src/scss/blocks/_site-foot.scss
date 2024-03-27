@@ -6,6 +6,11 @@
     width: 3.75rem;
   }
 
+  /* For focus-visible to work */
+  a {
+    display: block;
+  }
+
   a:focus-visible {
     outline: 2px dashed var(--color-recover);
     outline-offset: 2px;

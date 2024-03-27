@@ -1,0 +1,54 @@
+.features {
+  &__list {
+    display: grid;
+    gap: var(--space-s);
+
+    @media (width >= 600px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__card {
+    display: grid;
+    justify-items: center;
+  }
+
+  svg {
+    @media (width >= 600px) {
+      margin-top: -48%;
+    }
+  }
+
+  @keyframes animate-in {
+    0% {
+      opacity: 0;
+      translate: 0 -50%;
+    }
+    100% {
+      opacity: 1;
+      translate: 0 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) and (animation-range: contain) {
+      &__card {
+        svg {
+          animation: animate-in ease-out forwards;
+          animation-timeline: view();
+          animation-fill-mode: both;
+        }
+
+        &:nth-child(1) svg {
+          animation-range: cover 15% contain 25%;
+        }
+        &:nth-child(2) svg {
+          animation-range: cover 20% contain 50%;
+        }
+        &:last-child svg {
+          animation-range: cover 25% contain 60%;
+        }
+      }
+    }
+  }
+}

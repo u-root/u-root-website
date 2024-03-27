@@ -1,6 +1,6 @@
 .home-hero {
-  // 189px - 138px von 320px bis 760px;
-  --site-head-height: clamp(11.813rem, 12.723rem + -4.55vw, 8.625rem);
+  // 228px-140px von 320px bis 760px;
+  --site-head-height: clamp(14.25rem, 18.25rem + -20vw, 8.75rem);
 
   display: grid;
   grid-template-rows: 1fr;
@@ -8,19 +8,19 @@
   min-height: calc(100dvh - var(--site-head-height));
 
   .color-dots svg {
-    height: 1em;
+    display: inline-block;
+    height: 1.5ex;
+    transform: translateY(0.1em);
   }
 
   &__content-wrap {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-m);
-    align-items: center;
+    position: relative;
+    display: grid;
+    justify-items: center;
 
     &::before,
     &::after {
       content: '';
-      background: #09f;
       width: 100%;
       flex-grow: 1;
       flex-basis: 0;
@@ -33,5 +33,16 @@
     &::after {
       min-height: var(--space-m);
     }
+  }
+
+  &__background {
+    position: absolute;
+    inset: 0;
+    background-image: url('images/u-root_terminal_screenshot.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    mix-blend-mode: screen;
+    opacity: 0.05;
+    z-index: -1;
   }
 }
