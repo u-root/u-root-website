@@ -1,19 +1,32 @@
+:root {
+  // 242px–90px von 320px bis 890px;
+  --site-head-height: clamp(15.125rem, 20.458rem + -26.67vw, 5.625rem);
+}
+
 .site-head {
-  width: min(100% - var(--space-xl), 80rem);
-  margin-inline: auto;
-  margin-block: var(--space-s);
+  width: 100%;
+  background-color: var(--color-void);
+  position: sticky;
+  top: 0;
+  z-index: 1;
 
-  /* For focus-visible to work */
-  a {
-    display: block;
-  }
+  &__wrapper {
+    width: min(100% - var(--space-xl), 72.5rem);
+    margin-inline: auto;
+    margin-block: var(--space-s);
 
-  a:focus-visible {
-    outline: 2px dashed var(--color-recover);
-    outline-offset: 2px;
-  }
+    /* For focus-visible to work */
+    a {
+      display: block;
+    }
 
-  a:not(.site-head__logo):hover {
-    color: var(--color-recover);
+    a:focus-visible {
+      outline: 2px dashed var(--color-recover);
+      outline-offset: 2px;
+    }
+
+    a:not(.site-head__logo):hover {
+      color: var(--color-recover);
+    }
   }
 }

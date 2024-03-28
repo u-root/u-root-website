@@ -1,6 +1,6 @@
 .home-hero {
-  // 228px-140px von 320px bis 760px;
-  --site-head-height: clamp(14.25rem, 18.25rem + -20vw, 8.75rem);
+  // 320px–210px von 320px bis 760px;
+  --site-head-height: clamp(20rem, 25rem + -25vw, 13.125rem);
 
   display: grid;
   grid-template-rows: 1fr;

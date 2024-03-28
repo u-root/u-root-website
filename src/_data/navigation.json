@@ -1,12 +1,12 @@
 {
   "items": [
     {
-      "text": "Success stories",
-      "url": "/#success-stories"
-    },
-    {
       "text": "Get started",
       "url": "/#get-started"
+    },
+    {
+      "text": "Success stories",
+      "url": "/#success-stories"
     },
     {
       "text": "Community",
