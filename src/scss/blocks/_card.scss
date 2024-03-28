@@ -3,7 +3,8 @@
   padding: var(--card-padding, var(--space-xs));
   background-color: rgb(54 73 78 / 0.15);
   border-radius: var(--border-radius);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
 
   &:after {
     content: '';

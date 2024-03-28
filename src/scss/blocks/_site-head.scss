@@ -5,13 +5,15 @@
 
 .site-head {
   width: 100%;
-  background-color: var(--color-void);
+  background-color: rgb(17 21 29 / 0.9);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   position: sticky;
   top: 0;
   z-index: 1;
 
   &__wrapper {
-    width: min(100% - var(--space-xl), 72.5rem);
+    width: min(100% - var(--space-xl), 90rem);
     margin-inline: auto;
     margin-block: var(--space-s);
 
