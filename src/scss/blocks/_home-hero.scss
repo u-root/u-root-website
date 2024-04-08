@@ -1,11 +1,9 @@
 .home-hero {
-  // 320px–210px von 320px bis 760px;
-  --site-head-height: clamp(20rem, 25rem + -25vw, 13.125rem);
-
   display: grid;
   grid-template-rows: 1fr;
   grid-auto-rows: max-content;
-  min-height: calc(100dvh - var(--site-head-height));
+  min-height: calc(100dvh - var(--site-head-height) - 5%);
+  margin-block-start: var(--site-head-height);
 
   .color-dots svg {
     display: inline-block;
@@ -16,7 +14,7 @@
   &__content-wrap {
     position: relative;
     display: grid;
-    justify-items: center;
+    place-items: center;
 
     &::before,
     &::after {
@@ -36,6 +34,7 @@
   }
 
   &__background {
+    box-sizing: content-box;
     position: absolute;
     inset: 0;
     background-image: url('images/u-root_terminal_screenshot.webp');
@@ -44,5 +43,17 @@
     mix-blend-mode: screen;
     opacity: 0.05;
     z-index: -1;
+  }
+
+  &__start-container {
+    // display: inline-block;
+    height: 1.5ex;
+    width: 1.5ex;
+    margin-inline: auto;
+  }
+
+  &__original-container {
+    min-height: 256px;
+    aspect-ratio: 1;
   }
 }

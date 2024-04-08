@@ -1,4 +1,8 @@
 .case-study {
+  &.markdown-content {
+    margin-top: var(--site-head-height);
+  }
+
   footer {
     color: var(--color-args);
     border-top: 1px solid var(--color-args);

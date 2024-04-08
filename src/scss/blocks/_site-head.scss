@@ -1,6 +1,11 @@
-:root {
+/* :root {
   // 242px–90px von 320px bis 890px;
   --site-head-height: clamp(15.125rem, 20.458rem + -26.67vw, 5.625rem);
+} */
+
+:root {
+  // 320px–210px von 320px bis 760px;
+  --site-head-height: clamp(15rem, 19.281rem + -21.4vw, 7.375rem);
 }
 
 .site-head {
@@ -8,14 +13,13 @@
   background-color: rgb(17 21 29 / 0.9);
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
-  position: sticky;
-  top: 0;
+  position: fixed;
   z-index: 1;
 
   &__wrapper {
     width: min(100% - var(--space-xl), 90rem);
     margin-inline: auto;
-    margin-block: var(--space-s);
+    padding-block: var(--space-xs);
 
     /* For focus-visible to work */
     a {
