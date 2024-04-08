@@ -11,13 +11,18 @@ const markdownFilter = require('./src/filters/markdown-filter.js');
 
 // Plugins
 const svgSprite = require('eleventy-plugin-svg-sprite');
+const { globPlugin } = require('esbuild-plugin-glob');
 
 // Transforms
 const htmlMinTransform = require('./src/transforms/html-min-transform.js');
 const purgeCSS = require('./src/transforms/css-purge-inline.js');
 
+const eleventyBuildSystem = require('@cagov/11ty-build-system');
+
 // Create a helpful production flag
 const isProduction = process.env.NODE_ENV === 'production';
+
+const path = require('path');
 
 module.exports = (eleventyConfig) => {
   // Set directories to pass through to the dist folder
@@ -42,11 +47,29 @@ module.exports = (eleventyConfig) => {
 
   // Add Shortcodes
   eleventyConfig.addShortcode('icon', require('./src/shortcodes/icon.js'));
+  eleventyConfig.addShortcode('script', require('./src/shortcodes/script.js'));
 
   // Plugins
   eleventyConfig.addPlugin(svgSprite, {
     path: './src/icons', // relative path to SVG directory
     outputFilepath: './dist/icons/icons.svg',
+  });
+
+  eleventyConfig.addPlugin(eleventyBuildSystem, {
+    processors: {
+      esbuild: {
+        watch: ['src/scripts/**/*'],
+        options: {
+          entryPoints: [path.resolve(__dirname, 'src/scripts/**/*')],
+          bundle: true,
+          minify: isProduction,
+          outdir: 'dist/scripts',
+          splitting: true,
+          format: 'esm',
+          plugins: [globPlugin()],
+        },
+      },
+    },
   });
 
   // Only minify HTML if we are in production because it slows builds _right_ down
