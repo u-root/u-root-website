@@ -6,7 +6,7 @@ scripts: 'homeHeroAnimation.js'
 ---
 
 <div class="wrapper | stack-3xl">
-  <section class="home-hero | stack-m">
+  <section class="home-hero">
     <div class="home-hero__content-wrap">
       <div class="home-hero__background"></div>
 
@@ -15,47 +15,44 @@ scripts: 'homeHeroAnimation.js'
         <span class="color-dots" style="display: inline-flex;">
           {% include "svg/color-dots.svg" %}
         </span>
-
-        <div class="home-hero__start-container"></div>
       </h1>
 
-      <div class="home-hero__original-container">
+      <div class="home-hero__key-visual">
         {% include "svg/home-hero_key-visual.svg" %}
       </div>
     </div>
-    <div class="logo-wall | stack-2xs my-stack-space-0 | color-args">
+
+    <div class="logo-wall | stack-2xs | color-args">
       <h2 class="font-base text-step-0 weight-regular">Heavily utilized by</h2>
 
-      <ul class="logo-wall__logo-list cluster" role="list" style="
-        --cluster-justification: center; 
-        --cluster-alignment: center; 
-        --cluster-gap: var(--space-m);
+      <ul class="logo-wall__logo-list | grid-switcher" role="list" style="
+        {# --gs-columns-small: 2; #}
+        --gs-bp-medium: 15rem;
+        --gs-gap: var(--space-m);
+        --gs-gap-vertical: 0;
       ">
         <li>
           <a href="https://9esec.io/" target="blank">
-            <span class="sr-only">9elements Cyber Security</span>
-            {% include "svg/9elements-logo.svg" %}
+            <img src="images/9elements-logo.svg" alt="9elements Cyber Security" width="200" height="120">
           </a>
         </li>
 
         <li>
           <a href="https://www.bytedance.com/" target="blank">
-            <span class="sr-only">ByteDance</span>
-            {% include "svg/byte-dance-logo.svg" %}
+            <img src="images/byte-dance-logo.svg" alt="ByteDance" width="226" height="120">
           </a>
         </li>
 
         <li>
           <a href="https://www.google.com/" target="blank">
-            <span class="sr-only">Google</span>
-            {% include "svg/google-logo.svg" %}
+            <img src="images/google-logo.svg" alt="Google" width="175" height="120">
           </a>
         </li>
 
         <li>
           <a href="https://trenchboot.org/" target="blank">
             <span class="sr-only">TrenchBoot</span>
-            <img loading="lazy" width="133" height="87" src="/images/trench-boot-logo.png" alt="">
+            <img loading="lazy" width="133" height="120" src="/images/trench-boot-logo.png" alt="">
           </a>
         </li>
       </ul>

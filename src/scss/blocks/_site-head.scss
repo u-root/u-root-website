@@ -1,11 +1,6 @@
-/* :root {
-  // 242px–90px von 320px bis 890px;
-  --site-head-height: clamp(15.125rem, 20.458rem + -26.67vw, 5.625rem);
-} */
-
 :root {
-  // 320px–210px von 320px bis 760px;
-  --site-head-height: clamp(15rem, 19.281rem + -21.4vw, 7.375rem);
+  // 242px–90px von 320px bis 890px;
+  --site-head-height: clamp(5.635rem, 20.755rem + -28.15vw, 15.125rem);
 }
 
 .site-head {
@@ -19,7 +14,7 @@
   &__wrapper {
     width: min(100% - var(--space-xl), 90rem);
     margin-inline: auto;
-    padding-block: var(--space-xs);
+    padding-block: var(--space-2xs);
 
     /* For focus-visible to work */
     a {

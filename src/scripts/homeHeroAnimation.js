@@ -1,47 +1,26 @@
 import { gsap } from 'gsap';
-import Flip from 'gsap/Flip';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-gsap.registerPlugin(Flip, ScrollTrigger);
-
-const keyVisualContainer = document.querySelector('.home-hero');
-const keyVisual = document.querySelector('.key-visual');
-const startContainer = document.querySelector('.home-hero__start-container');
-const originalContainer = document.querySelector(
-  '.home-hero__original-container'
-);
+gsap.registerPlugin(ScrollTrigger);
 
 const mm = gsap.matchMedia(),
   bp = 600;
 
-const state = Flip.getState(keyVisual);
-startContainer.appendChild(keyVisual);
-
-const flip = Flip.to(state, {
-  autoAlpha: 0,
-});
+const keyVisualWrapper = document.querySelector('.home-hero__key-visual');
+gsap.set(keyVisualWrapper, { height: 0, autoAlpha: 1 });
 
 /*
  * Move, fade and scale key visual on scroll
  */
-
-// Add flip animation to the ScrollTrigger
-ScrollTrigger.create({
-  trigger: 'body',
-  pin: keyVisualContainer,
-  start: 'top',
-  end: '+=50%',
-  scrub: true,
-  animation: flip, // Use flip animation for keyVisual
-  //markers: true,
-});
-
-gsap.set(originalContainer, { minHeight: 0 });
-gsap.to(originalContainer, {
-  minHeight: '256px',
+gsap.to(keyVisualWrapper, {
+  height: 'auto',
+  autoAlpha: 1,
+  duration: 1,
+  ease: 'linear',
   scrollTrigger: {
     trigger: 'body',
+    pin: true,
     start: 'top',
-    end: '+=50%',
+    end: '+=40%',
     scrub: true,
     //markers: true,
   },
@@ -50,13 +29,12 @@ gsap.to(originalContainer, {
 /*
  * Move and fade box items on scroll
  */
-
 const keyVisualItems = document.querySelectorAll('.key-visual__item');
 gsap.set(keyVisualItems, { y: 0, autoAlpha: 1 });
 
 for (const [i, item] of keyVisualItems.entries()) {
   // Stagger animation for keyVisualItems
-  const offset = 10; // Adjust this offset value as needed
+  const offset = 2; // Adjust this offset value as needed
   const distance = 2; // Adjust this distance value as needed
 
   let start = `+=${i * distance + offset}%`;
@@ -65,7 +43,7 @@ for (const [i, item] of keyVisualItems.entries()) {
     scrollTrigger: {
       trigger: 'body',
       start: start,
-      end: '+=10%',
+      end: '+=15%',
       scrub: true,
       //markers: true,
     },
@@ -87,7 +65,7 @@ const featuresCardIllustrations = document.querySelectorAll(
 gsap.set(featuresCardIllustrations, { y: -75, autoAlpha: 0 });
 
 const featuresCards = document.querySelectorAll('.features__card');
-const cardsReverseOrder = Array.from(featuresCards).reverse();
+// const cardsReverseOrder = Array.from(featuresCards).reverse();
 
 mm.add(
   {
@@ -99,18 +77,21 @@ mm.add(
     // context.conditions has a boolean property for each condition defined above indicating if it's matched or not.
     let { isDesktop, isMobile } = context.conditions;
 
-    for (const [i, item] of cardsReverseOrder.entries()) {
+    for (const [i, item] of featuresCards.entries()) {
       // Stagger animation for feature illustrations
-      let start = `-=${(i + 1) * 80 + 200}%`;
-      let end = `-=${(i + 1) * 80 + 100}%`;
+      const offset = 15; // Adjust this offset value as needed
+      const distance = 2; // Adjust this distance value as needed
+
+      let start = `+=${(i + 1) * distance + offset}%`;
+      let end = `+=${(i + 1) * distance + offset}%`;
 
       let illustration = item.querySelector('svg');
 
       gsap.to(illustration, {
         scrollTrigger: {
-          trigger: item,
-          start: isDesktop ? start : '-=250%',
-          end: isDesktop ? end : '-=100%',
+          trigger: isDesktop ? 'body' : item,
+          start: isDesktop ? start : '-=200%',
+          end: isDesktop ? end : '-=150%',
           scrub: true,
           //markers: true,
         },
@@ -118,7 +99,7 @@ mm.add(
         y: 0,
         duration: 1,
         ease: 'linear',
-        id: `feature-${i}`,
+        id: `feature-${i + 1}`,
       });
     }
   }
