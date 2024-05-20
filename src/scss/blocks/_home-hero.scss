@@ -18,9 +18,8 @@
     align-items: center;
 
     .key-visual {
-      width: clamp(14rem, 8.074rem + 29.63vw, 24rem);
+      height: clamp(14rem, 8.074rem + 29.63vw, 24rem);
       aspect-ratio: 1;
-      height: auto;
     }
   }
 

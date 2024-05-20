@@ -22,6 +22,7 @@ gsap.to(keyVisualWrapper, {
     start: 'top',
     end: '+=40%',
     scrub: true,
+    invalidateOnRefresh: true,
     //markers: true,
   },
 });
@@ -45,6 +46,7 @@ for (const [i, item] of keyVisualItems.entries()) {
       start: start,
       end: '+=15%',
       scrub: true,
+      invalidateOnRefresh: true,
       //markers: true,
     },
     duration: 1,
@@ -62,7 +64,10 @@ for (const [i, item] of keyVisualItems.entries()) {
 const featuresCardIllustrations = document.querySelectorAll(
   '.features__card svg'
 );
-gsap.set(featuresCardIllustrations, { y: -75, autoAlpha: 0 });
+gsap.set(featuresCardIllustrations, {
+  y: -75,
+  autoAlpha: 0,
+});
 
 const featuresCards = document.querySelectorAll('.features__card');
 // const cardsReverseOrder = Array.from(featuresCards).reverse();
@@ -79,8 +84,8 @@ mm.add(
 
     for (const [i, item] of featuresCards.entries()) {
       // Stagger animation for feature illustrations
-      const offset = 15; // Adjust this offset value as needed
-      const distance = 2; // Adjust this distance value as needed
+      const offset = 10; // Adjust this offset value as needed
+      const distance = 3; // Adjust this distance value as needed
 
       let start = `+=${(i + 1) * distance + offset}%`;
       let end = `+=${(i + 1) * distance + offset}%`;
@@ -88,18 +93,19 @@ mm.add(
       let illustration = item.querySelector('svg');
 
       gsap.to(illustration, {
-        scrollTrigger: {
-          trigger: isDesktop ? 'body' : item,
-          start: isDesktop ? start : '-=200%',
-          end: isDesktop ? end : '-=150%',
-          scrub: true,
-          //markers: true,
-        },
         autoAlpha: 1,
         y: 0,
         duration: 1,
         ease: 'linear',
         id: `feature-${i + 1}`,
+        scrollTrigger: {
+          trigger: isDesktop ? 'body' : item,
+          start: isDesktop ? start : '-=200%',
+          end: isDesktop ? end : '-=150%',
+          scrub: true,
+          invalidateOnRefresh: true,
+          markers: true,
+        },
       });
     }
   }
