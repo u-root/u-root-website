@@ -3,7 +3,7 @@ title: ByteDance
 date: 2023-10-10
 layout: 'layouts/case-study.njk'
 tags: []
-permalink: case-studies/{{ title | slugify }}.html
+permalink: success-stories/{{ title | slugify }}.html
 ---
 
 # ByteDance greatly improved their boot software stack

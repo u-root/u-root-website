@@ -1,6 +1,6 @@
 .case-study {
   &.markdown-content {
-    margin-top: var(--site-head-height);
+    margin-top: calc(var(--site-head-height) + var(--space-m));
   }
 
   footer {

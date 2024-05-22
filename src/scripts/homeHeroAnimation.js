@@ -5,8 +5,16 @@ gsap.registerPlugin(ScrollTrigger);
 const mm = gsap.matchMedia(),
   bp = 600;
 
+const homeHero = document.querySelector('.home-hero');
+
 const keyVisualWrapper = document.querySelector('.home-hero__key-visual');
-gsap.set(keyVisualWrapper, { height: 0, autoAlpha: 1 });
+gsap.set(keyVisualWrapper, { height: 0, autoAlpha: 0 });
+
+// Calculate relative offset to the top of the page in percentages
+const startOffsetPercent = () => {
+  const heroMarginTop = homeHero.getBoundingClientRect().top;
+  return Math.ceil((heroMarginTop / homeHero.offsetHeight) * 100);
+};
 
 /*
  * Move, fade and scale key visual on scroll
@@ -17,10 +25,10 @@ gsap.to(keyVisualWrapper, {
   duration: 1,
   ease: 'linear',
   scrollTrigger: {
-    trigger: 'body',
+    trigger: homeHero,
     pin: true,
-    start: 'top',
-    end: '+=40%',
+    start: () => `-=${startOffsetPercent()}%`,
+    end: '+=45%',
     scrub: true,
     invalidateOnRefresh: true,
     //markers: true,
@@ -33,18 +41,21 @@ gsap.to(keyVisualWrapper, {
 const keyVisualItems = document.querySelectorAll('.key-visual__item');
 gsap.set(keyVisualItems, { y: 0, autoAlpha: 1 });
 
+const homeHeroHeadline = document.querySelector('.home-hero__headline');
+
 for (const [i, item] of keyVisualItems.entries()) {
   // Stagger animation for keyVisualItems
-  const offset = 2; // Adjust this offset value as needed
-  const distance = 2; // Adjust this distance value as needed
+  const offset = 100; // Adjust this offset value as needed
+  const distance = 70; // Adjust this distance value as needed
 
   let start = `+=${i * distance + offset}%`;
+  console.log('start', start);
 
   gsap.to(item, {
     scrollTrigger: {
-      trigger: 'body',
+      trigger: homeHeroHeadline,
       start: start,
-      end: '+=15%',
+      end: '+=10%',
       scrub: true,
       invalidateOnRefresh: true,
       //markers: true,
@@ -61,7 +72,8 @@ for (const [i, item] of keyVisualItems.entries()) {
  * Move and fade feature illustrations on scroll
  */
 
-const featuresCardIllustrations = document.querySelectorAll(
+const featureSection = document.querySelector('.features');
+const featuresCardIllustrations = featureSection.querySelectorAll(
   '.features__card svg'
 );
 gsap.set(featuresCardIllustrations, {
@@ -70,7 +82,7 @@ gsap.set(featuresCardIllustrations, {
 });
 
 const featuresCards = document.querySelectorAll('.features__card');
-// const cardsReverseOrder = Array.from(featuresCards).reverse();
+//const cardsReverseOrder = Array.from(featuresCards).reverse();
 
 mm.add(
   {
@@ -84,11 +96,11 @@ mm.add(
 
     for (const [i, item] of featuresCards.entries()) {
       // Stagger animation for feature illustrations
-      const offset = 10; // Adjust this offset value as needed
-      const distance = 3; // Adjust this distance value as needed
+      const offset = 55; // Adjust this offset value as needed
+      const distance = 10; // Adjust this distance value as needed
 
       let start = `+=${(i + 1) * distance + offset}%`;
-      let end = `+=${(i + 1) * distance + offset}%`;
+      //let end = `+=${(i + 1) * distance + offset + 100}%`;
 
       let illustration = item.querySelector('svg');
 
@@ -99,9 +111,9 @@ mm.add(
         ease: 'linear',
         id: `feature-${i + 1}`,
         scrollTrigger: {
-          trigger: isDesktop ? 'body' : item,
+          trigger: isDesktop ? homeHero : item,
           start: isDesktop ? start : '-=200%',
-          end: isDesktop ? end : '-=150%',
+          end: isDesktop ? '+=10%' : '-=150%',
           scrub: true,
           invalidateOnRefresh: true,
           //markers: true,

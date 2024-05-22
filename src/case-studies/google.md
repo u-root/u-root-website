@@ -3,7 +3,7 @@ title: Google
 date: 2023-11-15
 layout: 'layouts/case-study.njk'
 tags: []
-permalink: case-studies/{{ title | slugify }}.html
+permalink: success-stories/{{ title | slugify }}.html
 ---
 
 # Google worked with 9elements to bring u-root test coverage to 75%
