@@ -104,7 +104,7 @@ mm.add(
           end: isDesktop ? end : '-=150%',
           scrub: true,
           invalidateOnRefresh: true,
-          markers: true,
+          //markers: true,
         },
       });
     }
