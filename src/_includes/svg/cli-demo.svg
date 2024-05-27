@@ -1,7 +1,4 @@
-<svg
-  viewBox="0 0 610 409"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 610 409" fill="none" xmlns="http://www.w3.org/2000/svg">
   <style>
     .code {
       font-family: 'Roboto Mono', monospace;
@@ -9,10 +6,10 @@
       font-weight: 500;
       line-height: 1.5;
       color: #e7eaee;
+    }
 
-      > * + * {
-        margin-block-start: 1.5em;
-      }
+    .code > * + * {
+      margin-block-start: 1.5em;
     }
 
     .comment {
@@ -38,14 +35,17 @@
     <foreignObject x="32" y="77" width="530" height="300">
       <div class="code" xmlns="http://www.w3.org/1999/xhtml">
         <p>
-          wget https://github.com/u-root/u-root-distro/releases/download/v0.0.3/kernel-x86_64
+          wget
+          https://github.com/u-root/u-root-distro/releases/download/v0.0.3/kernel-x86_64
         </p>
         <p>git clone https://github.com/u-root/u-root</p>
         <p>
-          (cd u-root &amp;&amp; go build . &amp;&amp; GOOS=linux GOARCH=amd64 ./u-root -o initramfs)
+          (cd u-root &amp;&amp; go build . &amp;&amp; GOOS=linux GOARCH=amd64
+          ./u-root -o initramfs)
         </p>
         <p>
-          qemu-system-x86_64 -nographic -kernel kernel-x86_64 -initrd u-root/initramfs
+          qemu-system-x86_64 -nographic -kernel kernel-x86_64 -initrd
+          u-root/initramfs
         </p>
         <p class="comment"># try to exit qemu with poweroff</p>
       </div>
