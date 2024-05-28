@@ -47,7 +47,7 @@
           qemu-system-x86_64 -nographic -kernel kernel-x86_64 -initrd
           u-root/initramfs
         </p>
-        <p class="comment"># try to exit qemu with poweroff</p>
+        <p class="comment"># you can exit qemu with the poweroff command</p>
       </div>
     </foreignObject>
   </g>

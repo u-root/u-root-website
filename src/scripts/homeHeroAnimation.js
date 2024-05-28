@@ -29,7 +29,7 @@ gsap.to(keyVisualWrapper, {
     pin: true,
     start: () => `-=${startOffsetPercent()}%`,
     end: '+=45%',
-    scrub: true,
+    scrub: 0.25,
     invalidateOnRefresh: true,
     //markers: true,
   },
@@ -56,7 +56,7 @@ for (const [i, item] of keyVisualItems.entries()) {
       trigger: homeHeroHeadline,
       start: start,
       end: '+=10%',
-      scrub: true,
+      scrub: 0.25,
       invalidateOnRefresh: true,
       //markers: true,
     },
@@ -96,7 +96,7 @@ mm.add(
 
     for (const [i, item] of featuresCards.entries()) {
       // Stagger animation for feature illustrations
-      const offset = 55; // Adjust this offset value as needed
+      const offset = 35; // Adjust this offset value as needed
       const distance = 10; // Adjust this distance value as needed
 
       let start = `+=${(i + 1) * distance + offset}%`;
@@ -114,7 +114,7 @@ mm.add(
           trigger: isDesktop ? homeHero : item,
           start: isDesktop ? start : '-=200%',
           end: isDesktop ? '+=10%' : '-=150%',
-          scrub: true,
+          scrub: 0.25,
           invalidateOnRefresh: true,
           //markers: true,
         },

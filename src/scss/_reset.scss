@@ -34,8 +34,11 @@ body {
 }
 
 /* Set core root defaults */
-html {
-  scroll-behavior: smooth;
+@supports (scroll-behavior: smooth) {
+  /* Supports smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 /* Set core body defaults */
