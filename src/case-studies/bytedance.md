@@ -4,6 +4,7 @@ date: 2023-10-10
 layout: 'layouts/case-study.njk'
 tags: []
 permalink: success-stories/{{ title | slugify }}.html
+metaDesc: 'ByteDance greatly improved their boot software stack.'
 ---
 
 # ByteDance greatly improved their boot software stack

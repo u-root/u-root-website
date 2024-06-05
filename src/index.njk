@@ -26,7 +26,6 @@ scripts: 'homeHeroAnimation.js'
       <h2 class="font-base text-step-0 weight-regular">In use by</h2>
 
       <ul class="logo-wall__logo-list | grid-switcher" role="list" style="
-        {# --gs-columns-small: 2; #}
         --gs-bp-medium: 15rem;
         --gs-gap: var(--space-m);
         --gs-gap-vertical: 0;
@@ -156,14 +155,6 @@ scripts: 'homeHeroAnimation.js'
       --sidebar-threshold: 20rem;
       align-items: center;
     ">
-      {# <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 600 380"
-        width="500"
-        height="100%"
-        fill="none">
-          <rect width="600" height="380" fill="currentColor">
-        </svg> #}
       {% include "svg/cli-demo.svg" %}
 
       <div class="stack-xs">
@@ -181,24 +172,6 @@ scripts: 'homeHeroAnimation.js'
       Crafting success
     </h2>
 
-    {# <article class="cluster" style="
-      --cluster-gap: var(--space-s-m);
-    ">
-      <h3 class="head-step-1" style="width: min(20ch, 100%);">
-        Google worked with 9elements to bring u‑root test coverage to 75%
-      </h3>
-
-      <div class="stack-xs-s" style="width: min(50ch, 100%);">
-        <p>
-          Google deployed u‑root-based firmware at scale in its data centers in Dec. 2020, and since that time its use has continued to grow, including support for ARM mainboards. The firmware images are built in seconds, not hours, as with UEFI; they allow Google to remove several megabytes of C-based UEFI software; and they allow Google to apply its world-class expertise in Linux and Go programs to firmware.
-        </p>
-
-        <p>
-          The Go toolchain has strong mitigations for supply-chain attacks, always a concern with firmware. With recent improvements in Go code size, it has become quite easy to fit u‑root’s 160 commands in a four MiB xz-compressed binary. Google worked with 9elements.org to bring u‑root test coverage to 75% in 2021.
-        </p>
-      </div>
-    </article> #}
-
     <ul class="grid-switcher" role="list" style="
       --gs-columns-large: 2;
       --gs-gap: var(--space-s);
@@ -208,7 +181,7 @@ scripts: 'homeHeroAnimation.js'
       <li>
         <a href="/success-stories/google" class="card case-study-teaser">
           <div class="case-study-teaser__title">
-            Google worked with 9elements to bring u‑root test coverage to 75%
+            Google worked with 9elements to bring u‑root test coverage up significantly
           </div>
 
           <div class="case-study-teaser__link">
